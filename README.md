@@ -6,6 +6,7 @@ The system is controlled by an AT89C51 microcontroller programmed in Assembly la
 # 💻 Simulation Display
 Here is the schematic view of the system simulated in Proteus ISIS.
 
+
 # ✨ Key Features
 - **Real-time Monitoring**: The system continuously monitors 4 environmental parameters:
 
@@ -91,7 +92,7 @@ Here is the schematic view of the system simulated in Proteus ISIS.
 1. **Clone the Repository**:
    
 ```
-git clone [YOUR-REPOSITORY-URL]
+git clone https://github.com/awildfin/Greenhouse-System-using-AT89C51.git
 ```
 
 2. **Open the Project**: Open the GREENHOUSE_SYSTEM.pdsprj file using Proteus software.
