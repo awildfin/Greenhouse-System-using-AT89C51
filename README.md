@@ -102,7 +102,7 @@ git clone https://github.com/awildfin/Greenhouse-System-using-AT89C51.git
 # 📂 File Structure
 - `GREENHOUSE_SYSTEM.pdsprj`: The main Proteus project file.
 
-- `main.asm`: The Assembly source code for the AT89C51 microcontroller.
+- `GREENHOUSE ASSEMBLY PROGRAM.asm`: The Assembly source code for the AT89C51 microcontroller.
 
 - `Screenshot 2025-09-03 104900.png`: The circuit schematic image.
 
