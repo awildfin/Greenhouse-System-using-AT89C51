@@ -106,6 +106,6 @@ git clone https://github.com/awildfin/Greenhouse-System-using-AT89C51.git
 
 - `Debug.HEX`: The compiled firmware file that is loaded onto the microcontroller.
 
-- `Schematic.png`: The circuit schematic image.
+- `Screenshot 2025-09-03 104900.png`: The circuit schematic image.
 
 Happy building!
