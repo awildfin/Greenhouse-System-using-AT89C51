@@ -5,7 +5,7 @@ The system is controlled by an AT89C51 microcontroller programmed in Assembly la
 
 # 💻 Simulation Display
 Here is the schematic view of the system simulated in Proteus ISIS.
-
+![Simulation Schematic](Screenshot 2025-09-03 104900.png)
 
 # ✨ Key Features
 - **Real-time Monitoring**: The system continuously monitors 4 environmental parameters:
