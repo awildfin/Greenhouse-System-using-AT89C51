@@ -106,7 +106,7 @@ git clone https://github.com/awildfin/Greenhouse-System-using-AT89C51.git
 
 - `Screenshot 2025-09-03 104900.png`: The circuit schematic image.
 
-# DISCLAIMER!!
+# ‼️ DISCLAIMER!!
 The convertion code for the sensors is still not perfect and needed a few adjustments. Currently the code only uses a very simple mathematics to convert, not the real and right formula!
 
 Happy building!
