@@ -104,8 +104,6 @@ git clone https://github.com/awildfin/Greenhouse-System-using-AT89C51.git
 
 - `main.asm`: The Assembly source code for the AT89C51 microcontroller.
 
-- `Debug.HEX`: The compiled firmware file that is loaded onto the microcontroller.
-
 - `Screenshot 2025-09-03 104900.png`: The circuit schematic image.
 
 Happy building!
