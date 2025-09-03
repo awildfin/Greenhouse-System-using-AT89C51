@@ -7,7 +7,7 @@ The system is controlled by an AT89C51 microcontroller programmed in Assembly la
 Here is the schematic view of the system simulated in Proteus ISIS.
 
 # ✨ Key Features
-- **Real-time Monitoring:** The system continuously monitors 4 environmental parameters:
+- **Real-time Monitoring**: The system continuously monitors 4 environmental parameters:
 
 1. **Air Temperature (LM35)**
 
@@ -17,207 +17,98 @@ Here is the schematic view of the system simulated in Proteus ISIS.
 
 4. **Soil Moisture (simulated with a potentiometer)**
 
-- **Automatic Control:** Actuators operate automatically based on predefined threshold values.
+- **Automatic Control**: Actuators operate automatically based on predefined threshold values.
 
-- **LCD Display:** All sensor data is displayed in real-time on a 4x20 LCD screen for easy monitoring.
+- **LCD Display**: All sensor data is displayed in real-time on a 4x20 LCD screen for easy monitoring.
 
 # 🛠️ Components Used
 **Hardware (Simulation)**
-- Microcontroller: AT89C51
+- **Microcontroller**: AT89C51
 
-- Sensors:
+- **Sensors**:
 
   - `LM35`: Temperature Sensor
 
-HIH5030: Air Humidity Sensor
+  - `HIH5030`: Air Humidity Sensor
 
-TSL251RD: Light Sensor
+  - `TSL251RD`: Light Sensor
 
-Potentiometer: To simulate a Soil Moisture Sensor
+  - `Potentiometer`: To simulate a Soil Moisture Sensor
 
-Actuators:
+- **Actuators**:
 
-Heater: Represented by an LED & Transistor
+  - `Heater`: Represented by an LED & Transistor
 
-Cooling Fan: DC Motor
+  - `Cooling Fan`: DC Motor
 
-Growlight: Represented by an LED & Transistor
+  - `Growlight`: Represented by an LED & Transistor
 
-Sprayer: DC Motor
+  - `Sprayer`: DC Motor
 
-Servo Motor: Controls ventilation
+  - `Servo Motor`: Controls ventilation
 
-Supporting Components:
+- **Supporting Components**:
 
-ADC0804: Analog to Digital Converter
+  - `ADC0804`: Analog to Digital Converter
 
-4052: Multiplexer, to select sensor input
+  - `4052`: Multiplexer, to select sensor input
 
-L293D: Motor Driver to control the fan and sprayer
+  - `L293D`: Motor Driver to control the fan and sprayer
 
-LM041L: 4x20 LCD Display
+  - `LM041L`: 4x20 LCD Display
 
-Crystal oscillator circuit, resistors, and capacitors.
+  - Crystal oscillator circuit, resistors, and capacitors.
 
-Software
-Design & Simulation: Proteus Design Suite
+**Software**
+- Design & Simulation: Proteus Design Suite
 
-Programming Language: Assembly (8051)
+- Programming Language: Assembly (8051)
 
-Compiler/Assembler: Keil uVision or another compatible assembler.
+- Compiler/Assembler: Keil uVision or another compatible assembler.
 
-⚙️ How the System Works
-Sensor Reading: The AT89C51 microcontroller sequentially selects input from each sensor via the Multiplexer (4052).
+# ⚙️ How the System Works
+1. Sensor Reading: The AT89C51 microcontroller sequentially selects input from each sensor via the Multiplexer (4052).
 
-Signal Conversion: The analog signal from the sensors is converted to a digital signal by the ADC0804.
+2. Signal Conversion: The analog signal from the sensors is converted to a digital signal by the ADC0804.
 
-Data Processing: The received digital data is then processed and converted into appropriate units (degrees Celsius for temperature, and percentage for others).
+3. Data Processing: The received digital data is then processed and converted into appropriate units (degrees Celsius for temperature, and percentage for others).
 
-Data Display: The converted results from each sensor are displayed on the LCD screen.
+4. Data Display: The converted results from each sensor are displayed on the LCD screen.
 
-Actuator Activation: The microcontroller will activate or deactivate the actuators based on the following logic:
+5. Actuator Activation: The microcontroller will activate or deactivate the actuators based on the following logic:
 
-Heater: ON if temperature < 23°C.
+  - **Heater**: `ON` if temperature `< 23°C`.
 
-Cooling Fan: ON if temperature > 27°C.
+  - **Cooling Fan**: `ON` if temperature `> 27°C`.
 
-Growlight: ON if light intensity < 30%.
+  - **Growlight**: `ON` if light intensity `< 30%`.
 
-Sprayer: ON if soil moisture < 40%.
+  - **Sprayer**: `ON` if soil moisture `< 40%`.
 
-Ventilation (Servo): OPEN if air humidity > 40%.
+  - **Ventilation (Servo)**: `OPEN` if air humidity `> 40%`.
 
-🚀 How to Run the Simulation
-Clone the Repository:
-
+# 🚀 How to Run the Simulation
+1. **Clone the Repository**:
+   
+```
 git clone [YOUR-REPOSITORY-URL]
+```
 
-Open the Project: Open the GREENHOUSE_SYSTEM.pdsprj file using Proteus software.
+2. **Open the Project**: Open the GREENHOUSE_SYSTEM.pdsprj file using Proteus software.
 
-Load the Firmware: Check the AT89C51 microcontroller component and ensure its program file is pointing to the .HEX file included in the project.
+3. **Load the Firmware**: Check the AT89C51 microcontroller component and ensure its program file is pointing to the .HEX file included in the project.
 
-Run the Simulation: Click the "Play" button (▶️) at the bottom left corner to start the simulation.
+4. **Run the Simulation**: Click the "Play" button (▶️) at the bottom left corner to start the simulation.
 
-Test: Change the values on the potentiometer or other sensors to observe the actuator responses and the updated values on the LCD.
+5. **Test**: Change the values on the potentiometer or other sensors to observe the actuator responses and the updated values on the LCD.
 
-📂 File Structure
-GREENHOUSE_SYSTEM.pdsprj: The main Proteus project file.
+# 📂 File Structure
+- `GREENHOUSE_SYSTEM.pdsprj`: The main Proteus project file.
 
-main.asm: The Assembly source code for the AT89C51 microcontroller.
+- `main.asm`: The Assembly source code for the AT89C51 microcontroller.
 
-Debug.HEX: The compiled firmware file that is loaded onto the microcontroller.
+- `Debug.HEX`: The compiled firmware file that is loaded onto the microcontroller.
 
-image_613a3c.png: The circuit schematic image.
-
-Happy building!Automated Greenhouse Control System Simulation Project
-This project is a simulation of an automated greenhouse environmental control system using Proteus software. The system is designed to monitor and maintain ideal environmental conditions for plants, such as temperature, air humidity, light intensity, and soil moisture.
-
-The system is controlled by an AT89C51 microcontroller programmed in Assembly language.
-
-💻 Simulation Display
-Here is the schematic view of the system simulated in Proteus ISIS.
-
-✨ Key Features
-Real-time Monitoring: The system continuously monitors 4 environmental parameters:
-
-Air Temperature (LM35)
-
-Air Humidity (HIH5030)
-
-Light Intensity (TSL251RD)
-
-Soil Moisture (simulated with a potentiometer)
-
-Automatic Control: Actuators operate automatically based on predefined threshold values.
-
-LCD Display: All sensor data is displayed in real-time on a 4x20 LCD screen for easy monitoring.
-
-🛠️ Components Used
-Hardware (Simulation)
-Microcontroller: AT89C51
-
-Sensors:
-
-LM35: Temperature Sensor
-
-HIH5030: Air Humidity Sensor
-
-TSL251RD: Light Sensor
-
-Potentiometer: To simulate a Soil Moisture Sensor
-
-Actuators:
-
-Heater: Represented by an LED & Transistor
-
-Cooling Fan: DC Motor
-
-Growlight: Represented by an LED & Transistor
-
-Sprayer: DC Motor
-
-Servo Motor: Controls ventilation
-
-Supporting Components:
-
-ADC0804: Analog to Digital Converter
-
-4052: Multiplexer, to select sensor input
-
-L293D: Motor Driver to control the fan and sprayer
-
-LM041L: 4x20 LCD Display
-
-Crystal oscillator circuit, resistors, and capacitors.
-
-Software
-Design & Simulation: Proteus Design Suite
-
-Programming Language: Assembly (8051)
-
-Compiler/Assembler: Keil uVision or another compatible assembler.
-
-⚙️ How the System Works
-Sensor Reading: The AT89C51 microcontroller sequentially selects input from each sensor via the Multiplexer (4052).
-
-Signal Conversion: The analog signal from the sensors is converted to a digital signal by the ADC0804.
-
-Data Processing: The received digital data is then processed and converted into appropriate units (degrees Celsius for temperature, and percentage for others).
-
-Data Display: The converted results from each sensor are displayed on the LCD screen.
-
-Actuator Activation: The microcontroller will activate or deactivate the actuators based on the following logic:
-
-Heater: ON if temperature < 23°C.
-
-Cooling Fan: ON if temperature > 27°C.
-
-Growlight: ON if light intensity < 30%.
-
-Sprayer: ON if soil moisture < 40%.
-
-Ventilation (Servo): OPEN if air humidity > 40%.
-
-🚀 How to Run the Simulation
-Clone the Repository:
-
-git clone [YOUR-REPOSITORY-URL]
-
-Open the Project: Open the GREENHOUSE_SYSTEM.pdsprj file using Proteus software.
-
-Load the Firmware: Check the AT89C51 microcontroller component and ensure its program file is pointing to the .HEX file included in the project.
-
-Run the Simulation: Click the "Play" button (▶️) at the bottom left corner to start the simulation.
-
-Test: Change the values on the potentiometer or other sensors to observe the actuator responses and the updated values on the LCD.
-
-📂 File Structure
-GREENHOUSE_SYSTEM.pdsprj: The main Proteus project file.
-
-main.asm: The Assembly source code for the AT89C51 microcontroller.
-
-Debug.HEX: The compiled firmware file that is loaded onto the microcontroller.
-
-image_613a3c.png: The circuit schematic image.
+- `image_613a3c.png`: The circuit schematic image.
 
 Happy building!
