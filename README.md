@@ -27,7 +27,7 @@ Here is the schematic view of the system simulated in Proteus ISIS.
 
 - Sensors:
 
-> - `LM35`: Temperature Sensor
+  - `LM35`: Temperature Sensor
 
 HIH5030: Air Humidity Sensor
 
